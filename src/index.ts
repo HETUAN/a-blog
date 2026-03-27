@@ -73,7 +73,7 @@ const layout = (title: string, content: string, showNav: boolean = true) => `
 app.get('/', async (c) => {
   const pageStr = c.req.query('page') || '1'
   const page = parseInt(pageStr, 10) > 0 ? parseInt(pageStr, 10) : 1
-  const pageSize = 5
+  const pageSize = 10
   const offset = (page - 1) * pageSize
 
   // 查询总数
